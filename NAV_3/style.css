@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-  background: #24252a;
 }
 
 body {
@@ -25,6 +24,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 30px 10%;
+  background: #24252a;
 }
 
 h1 {
@@ -34,11 +34,28 @@ h1 {
 
 .logo {
   cursor: pointer;
+  /* order:3; 
+  Must be part of flexbox or child of container */
+  order: 3;
+  /* margin-left:auto; 
+  pushes to far right */
+  margin-left: auto;
+}
+
+/* nav { order:1; } 
+Direct child of header flex container */
+nav {
+  order: 1;
 }
 
 .nav_links li {
   display: inline-block;
   padding: 0px 20px;
+}
+
+/* Changes link to move left 1st child */
+.nav_links li:nth-child(1) {
+  padding: 0px 20px 0 0;
 }
 
 .nav_links li a {
@@ -49,8 +66,23 @@ h1 {
   color: #0088a9;
 }
 
+/* .cta { order:2; } 
+ */
+.cta {
+  order: 2;
+}
 button {
+  /* margin-left: 20px;
+  fix space on button */
+  margin-left: 20px;
   padding: 9px 25px;
   background-color: rgba(0, 136, 169, 1);
   border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
 }
