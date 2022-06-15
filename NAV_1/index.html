@@ -13,6 +13,8 @@
     />
     <!-- Style CSS -->
     <link rel="stylesheet" href="style.css" />
+    <!-- script -->
+    <script src="script.js" defer></script>
 
     <title>Navbar 1</title>
   </head>
@@ -27,6 +29,15 @@
         </ul>
       </nav>
       <a href="#" class="cta"><button>Contact</button></a>
+      <a onclick="openNav()" href="#" class="menu"><button>Menu</button></a>
     </header>
+    <div id="mobile__menu" class="overlay">
+      <a class="close" onclick="closeNav()">&times;</a>
+      <div class="overlay__content">
+        <a href="#">Services</a>
+        <a href="#">Projects</a>
+        <a href="#">About</a>
+      </div>
+    </div>
   </body>
 </html>

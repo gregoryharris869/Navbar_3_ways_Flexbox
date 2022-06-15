@@ -6,6 +6,7 @@
 }
 
 body {
+  background: #24252a;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -20,7 +21,6 @@ h1 {
 }
 
 header {
-  background: #24252a;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,4 +60,33 @@ button {
 
 button:hover {
   background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* Mobile Nav */
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252a;
+  overflow-x: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.3s ease 0s;
 }
